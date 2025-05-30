@@ -1,8 +1,14 @@
 package collectionsFramework;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class CollectionsFramework {
 	
@@ -99,6 +105,93 @@ public class CollectionsFramework {
 	
 	System.out.println("employeenameLinkedlist size is " + empnameLinkedList.size());
 	System.out.println(empnameLinkedList);
+	
+	// Order of Storing Values: Random Order
+	// Null Values: Allowed
+
+	Set<String> empNamesHashSet = new HashSet<String>();
+	empNamesHashSet.add("Teja");
+	empNamesHashSet.add("Afreen");
+	empNamesHashSet.add("Aryan");
+	empNamesHashSet.add("Bharath");
+	empNamesHashSet.add("Afreen"); // duplicate, ignored
+	empNamesHashSet.add(null);
+
+	empNamesHashSet.remove("Bharath");
+
+	System.out.println("HashSet size = " + empNamesHashSet.size());
+	System.out.println(empNamesHashSet);
+	
+	System.out.println("*************** LinkedHashSet ***************");
+
+	// Syntax to Initialize/create: Set<DataType> variable = new LinkedHashSet<DataType>();
+	// Syntax to add data: variable.add(value);
+	// Syntax to remove the data: variable.remove(value);
+	// Syntax to get the total value: variable.size();
+
+	// Order of Storing Values: Insertion Order
+	// Null Values: Allowed
+
+	Set<String> empNamesLinkedHashSet = new LinkedHashSet<String>();
+	empNamesLinkedHashSet.add("Teja");
+	empNamesLinkedHashSet.add("Afreen");
+	empNamesLinkedHashSet.add("Aryan");
+	empNamesLinkedHashSet.add("Bharath");
+	empNamesLinkedHashSet.add("Teja");   // Duplicate, ignored
+	empNamesLinkedHashSet.add(null);
+	empNamesLinkedHashSet.add(null);    // Duplicate null, ignored
+
+	empNamesLinkedHashSet.remove("Bharath");
+
+	System.out.println("LinkedHashSet size is :" + empNamesLinkedHashSet.size());
+	System.out.println(empNamesLinkedHashSet);
+	
+	System.out.println("*************** TreeSet ***************");
+
+	// Syntax to Initialize/create: Set<DataType> variable = new TreeSet<DataType>();
+	// Syntax to add data: variable.add(value);
+	// Syntax to remove the data: variable.remove(value);
+	// Syntax to get the total value: variable.size();
+
+	// Order of Storing Values: Ascending/Alphabetical order
+	// Null Values: Not Allowed (will throw NullPointerException at runtime)
+
+	Set<String> empNamesTreeSet = new TreeSet<String>();
+	empNamesTreeSet.add("Teja");
+	empNamesTreeSet.add("Afreen");
+	empNamesTreeSet.add("Aryan");
+	empNamesTreeSet.add("Bharath");
+	empNamesTreeSet.add("Teja");     // Duplicate, ignored
+
+	//empNamesTreeSet.add(null);       // ❌ This will throw NullPointerException
+	empNamesTreeSet.remove("Bharath");
+
+	System.out.println("TreeSet size is : " + empNamesTreeSet.size());
+	System.out.println(empNamesTreeSet);
+	
+	System.out.println("*************** HashMap ***************");
+
+	// Syntax to Initialize/create: Map<Key,Value> variable = new HashMap<Key,Value>();
+	// Syntax to add data: variable.put(Key,value);
+	// Syntax to remove the data: variable.remove(key);
+	// Syntax to get the total value: variable.size();
+	// Syntax to get the total value: variable.get(key);
+
+	// Order of Storing Values: Ascending/Alphabetical order
+	// Null Values: Not Allowed (will throw NullPointerException at runtime)
+
+	Map<Integer,String> empNamesHashMap = new HashMap<Integer,String>();
+	empNamesHashMap.add(Name,"Teja");
+	empNamesHashMap.add(10,"Afreen");
+	empNamesHashMap.add("Aryan");
+	empNamesHashMap.add("Bharath");
+	empNamesHashMap.add("Teja");     // Duplicate, ignored
+
+	//empNamesHashMap.add(null);       // ❌ This will throw NullPointerException
+	empNamesHashMap.remove("Bharath");
+
+	System.out.println("HashMap size is : " + empNamesHashMap.size());
+	System.out.println(empNamesHashMap);
 }
 }
 
