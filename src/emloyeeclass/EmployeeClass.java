@@ -13,8 +13,7 @@ public class EmployeeClass {
 		int Emp3Id =1236;
 
 public static void main(String[] args) {
-	EmployeeClass obj = new EmployeeClass();
-	System.out.println(obj.Emp1Name);
+	
 	
 	
 }
