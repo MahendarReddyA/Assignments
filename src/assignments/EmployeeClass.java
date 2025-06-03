@@ -1,4 +1,4 @@
-package emloyeeclass;
+package assignments;
 
 public class EmployeeClass {
 
